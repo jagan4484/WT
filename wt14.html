@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPA Calculation</title>
+</head>
+<link rel="stylesheet" type="text/css" href="file:///D:/Education/sem%205/WT/HTML/wt14.css">
+<body>
+	<div id="a1">
+
+		<center><p style="color: white">GPA Calculation</p></center>
+		
+	</div>
+	<br>
+	<br>
+		<center><label>Select Semester :</label>
+			<select id="sem" onchange="fun()">
+				<option selected>none</option>
+				<option >sem 3</option>
+				<option >sem 4</option>
+			</select>
+			<button onclick="fun1()"> <a id="r" href="#result"> Calculate</a></button>
+		</center>
+			<br>
+			<br>
+
+
+<div class="subject">
+<center>  
+	<table border="2" id="tab1">
+					<tr>
+						<thead>THEORY</thead>
+						<th>Course Code</th>
+						<th>Course Name</th>
+						<th>Credit </th>
+						<th>Enter Grade</th>
+					</tr>
+					<tr id="row1">
+						<td id="r1d0"></td>
+						<td id="r1d1"></td>
+						<td id="r1d2"></td>
+						<td id="r1d3"><input id="r1d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row2">
+						<td id="r2d0"></td>
+						<td id="r2d1"></td>
+						<td id="r2d2"></td>
+						<td id="r2d3"><input id="r2d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row3">
+						<td id="r3d0"></td>
+						<td id="r3d1"></td>
+						<td id="r3d2"></td>
+						<td id="r3d3"><input id="r3d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row4">
+						<td id="r4d0"></td>
+						<td id="r4d1"></td>
+						<td id="r4d2"></td>
+						<td id="r4d3"><input id="r4d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row5">
+						<td id="r5d0"></td>
+						<td id="r5d1"></td>
+						<td id="r5d2"></td>
+						<td id="r5d3"><input id="r5d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row6">
+						<td id="r6d0"></td>
+						<td id="r6d1"></td>
+						<td id="r6d2"></td>
+						<td id="r6d3"><input id="r6d3i1" type="text" value="A"></td>
+					</tr>
+						
+				</table></center>
+</div>
+<div id="lab">
+
+	<br>
+
+		<center>	<table border="2" id="tab1">
+					<tr>
+						<thead>PRACTICAL</thead>
+						<th>Course Code</th>
+						<th>Course Name</th>
+						<th>Credit </th>
+						<th>Enter Grade</th>
+					</tr>
+					<tr id="row7">
+						<td id="lr1d0"></td>
+						<td id="lr1d1"></td>
+						<td id="lr1d2"></td>
+						<td id="lr1d3"><input id="lr1d3i1" type="text" value="A" ></td>
+					</tr>
+					<tr id="row8">
+						<td id="lr2d0"></td>
+						<td id="lr2d1"></td>
+						<td id="lr2d2"></td>
+						<td id="lr2d3"><input id="lr2d3i1" type="text" value="A"></td>
+					</tr>
+					<tr id="row9">
+						<td id="lr3d0"></td>
+						<td id="lr3d1"></td>
+						<td id="lr3d2"></td>
+						<td id="lr3d3"><input id="lr3d3i1" type="text" value="A"></td>
+					</tr>						
+				</table>
+				<br>
+
+				<label id="result">Your GPA is  :</label><input type="text" name="res" id="res" maxlength="3" disabled>
+				</center>
+ 
+</div>
+			<script type="text/javascript">
+				function fun() 
+				{
+						
+						var str=document.getElementById("sem");
+						var op = str.options[str.selectedIndex].text;
+						
+						if(op=='sem 3')
+						{
+							
+							document.getElementById("r1d0").innerHTML="14MAT31" ;
+							document.getElementById("r1d1").innerHTML ="Mathematics- III" ;
+							document.getElementById("r1d2").innerHTML=" 4" ;
+							document.getElementById("r2d0").innerHTML="14ITT31" ;
+							document.getElementById("r2d1").innerHTML ="Data Structures and Algorithms Analysis I" ;
+							document.getElementById("r2d2").innerHTML ="3" ;
+							document.getElementById("r3d0").innerHTML="14ITT32" ;
+							document.getElementById("r3d1").innerHTML ="Digital Principles and Design" ;
+							document.getElementById("r3d2").innerHTML="4 " ;
+							document.getElementById("r4d0").innerHTML="14CST32" ;
+							document.getElementById("r4d1").innerHTML ="Object Oriented Programming using C++" ;
+							document.getElementById("r4d2").innerHTML ="3" ;
+							document.getElementById("r5d0").innerHTML="14CST33" ;
+							document.getElementById("r5d1").innerHTML ="Computer Organization" ;
+							document.getElementById("r5d2").innerHTML="3" ;
+							document.getElementById("r6d0").innerHTML="14ECT33" ;
+							document.getElementById("r6d1").innerHTML ="Communication Engineering" ;
+							document.getElementById("r6d2").innerHTML ="3" ;
+							document.getElementById("lr1d0").innerHTML="14ITL31" ;
+							document.getElementById("lr1d1").innerHTML ="Data Structures and Algorithms Analysis" ;
+							document.getElementById("lr1d2").innerHTML="1" ;
+							document.getElementById("lr2d0").innerHTML="14ITL32" ;
+							document.getElementById("lr2d1").innerHTML ="Digital Laboratory" ;
+							document.getElementById("lr2d2").innerHTML ="1" ;
+							document.getElementById("lr3d0").innerHTML="14CSL32" ;
+							document.getElementById("lr3d1").innerHTML ="Object Oriented Programming using C++ Laboratory" ;
+							document.getElementById("lr3d2").innerHTML="1" ;
+							
+
+						}
+						else 	if(op=='sem 4')
+						{
+							
+							document.getElementById("r1d0").innerHTML="14MAT43" ;
+							document.getElementById("r1d1").innerHTML ="Discrete Mathematics" ;
+							document.getElementById("r1d2").innerHTML=" 4" ;
+							document.getElementById("r2d0").innerHTML="14ITT41" ;
+							document.getElementById("r2d1").innerHTML ="Data Structures and Algorithms Analysis II" ;
+							document.getElementById("r2d2").innerHTML ="4" ;
+							document.getElementById("r3d0").innerHTML="14ITT42" ;
+							document.getElementById("r3d1").innerHTML ="Java Programming" ;
+							document.getElementById("r3d2").innerHTML="3" ;
+							document.getElementById("r4d0").innerHTML="14CST41" ;
+							document.getElementById("r4d1").innerHTML ="Database Management Systems" ;
+							document.getElementById("r4d2").innerHTML ="4" ;
+							document.getElementById("r5d0").innerHTML="14CST42" ;
+							document.getElementById("r5d1").innerHTML ="Operating Systems" ;
+							document.getElementById("r5d2").innerHTML="3" ;
+							document.getElementById("r6d0").innerHTML="14CST44" ;
+							document.getElementById("r6d1").innerHTML ="Software Engineering" ;
+							document.getElementById("r6d2").innerHTML ="3" ;
+							document.getElementById("lr1d0").innerHTML="14ITL41" ;
+							document.getElementById("lr1d1").innerHTML ="Java Programming Laboratory" ;
+							document.getElementById("lr1d2").innerHTML="1" ;
+							document.getElementById("lr2d0").innerHTML="14CSL41" ;
+							document.getElementById("lr2d1").innerHTML ="Database Management Systems Laboratory" ;
+							document.getElementById("lr2d2").innerHTML ="1" ;
+							document.getElementById("lr3d0").innerHTML="14CSL42" ;
+							document.getElementById("lr3d1").innerHTML ="Operating Systems Laboratory" ;
+							document.getElementById("lr3d2").innerHTML="1" ;
+							
+
+						}
+				}
+				function fun1()
+				{
+
+						var str=document.getElementById("sem");
+						var op = str.options[str.selectedIndex].text;
+
+						var Row = document.getElementById("row1");
+						var c1 = Row.getElementsByTagName("td");
+
+						var Row1 = document.getElementById("row2");
+						var c2 = Row1.getElementsByTagName("td");
+				
+						var Row3 = document.getElementById("row3");
+						var c3 = Row3.getElementsByTagName("td");
+						
+						var Row4 = document.getElementById("row4");
+						var c4 = Row4.getElementsByTagName("td");
+		
+						var Row5 = document.getElementById("row5");
+						var c5 = Row5.getElementsByTagName("td");
+						
+						var Row6 = document.getElementById("row6");
+						var c6 = Row6.getElementsByTagName("td");
+
+						var Row7 = document.getElementById("row7");
+						var c7 = Row7.getElementsByTagName("td");
+				
+						var Row8 = document.getElementById("row8");
+						var c8 = Row8.getElementsByTagName("td");
+						
+						var Row9 = document.getElementById("row9");
+						var c9 = Row9.getElementsByTagName("td");
+						
+						
+
+						var s1=	document.getElementById("r1d3i1").value ;
+						var s2=	document.getElementById("r2d3i1").value ;
+						var s3=	document.getElementById("r3d3i1").value ;
+						var s4=	document.getElementById("r4d3i1").value ;
+						var s5=	document.getElementById("r5d3i1").value ;
+						var s6=	document.getElementById("r6d3i1").value ;
+						
+						var l1=	document.getElementById("lr1d3i1").value ;
+						var l2=	document.getElementById("lr2d3i1").value ;
+						var l3=	document.getElementById("lr3d3i1").value ;
+
+	
+						if (op=="none")
+						{
+							alert("please Chosse Semester");
+						}
+
+						else
+						{
+
+						if(s1==""||s2==""||s3==""||s4==""||s5==""||s6==""||l1==""||l2==""||l3=="")
+						{
+							alert("Fill all the grade");
+						}
+						else if (s1=="RA"||s2=="RA"||s3=="RA"||s4=="RA"||s5=="RA"||s6=="RA"||l1=="RA"||l2=="RA"||l3=="RA"||s1=="ra"||s2=="ra"||s3=="ra"||s4=="ra"||s5=="ra"||s6=="ra"||l1=="ra"||l2=="ra"||l3=="ra")
+						{
+							alert("Cannot Calculate GPA");
+						}
+						else
+						{
+							var v1=fun2(s1); 
+							var v2=fun2(s2); 
+							var v3=fun2(s3); 
+							var v4=fun2(s4); 
+							var v5=fun2(s5); 
+							var v6=fun2(s6); 
+							var v7=fun2(l1); 
+							var v8=fun2(l2); 
+							var v9=fun2(l3); 
+							
+							var gp= parseInt(v1)*parseInt(c1[2].innerText);
+							var gp1=parseInt(v2)*parseInt(c2[2].innerText);
+							var gp2=parseInt(v3)*parseInt(c3[2].innerText);
+							var gp3=parseInt(v4)*parseInt(c4[2].innerText);
+							var gp4=parseInt(v5)*parseInt(c5[2].innerText);
+							var gp5=parseInt(v6)*parseInt(c6[2].innerText);
+							var gp6=parseInt(v7)*parseInt(c7[2].innerText);
+							var gp7=parseInt(v8)*parseInt(c8[2].innerText);
+							var gp8=parseInt(v9)*parseInt(c9[2].innerText);
+							var sumgp=parseInt(gp)+parseInt(gp1)+parseInt(gp2)+parseInt(gp3)+parseInt(gp4)+parseInt(gp5)+parseInt(gp6)+parseInt(gp7)+parseInt(gp8);
+							
+							var sumvp=parseInt(c1[2].innerText)+parseInt(c2[2].innerText)+parseInt(c3[2].innerText)+parseInt(c4[2].innerText)+parseInt(c5[2].innerText)+parseInt(c6[2].innerText)+parseInt(c7[2].innerText)+parseInt(c8[2].innerText)+parseInt(c9[2].innerText);
+							
+							var cgp=parseInt(sumgp)/parseInt(sumvp);
+							document.getElementById("res").value=cgp.toFixed(2);
+							
+
+						}
+
+						}
+				}
+				function fun2(s)
+				{
+						if(s=="S"||s=="s")
+						{
+							return 10;
+						}
+						else if(s=="A"||s=="a")
+						{
+							return 9;
+						}
+						else if(s=="B"||s=="b")
+						{
+							return 8;
+													}
+						else if(s=="C"||s=="c")
+						{
+							return 7;
+						}
+						else if(s=="D"||s=="d")
+						{
+							return 6;
+						}
+						else if(s=="E"||s=="e")
+						{
+							return 5;
+						}
+						else
+						{
+							alert("You enter wrong grade");
+						}
+										}
+						
+			</script>
+
+
+
+</body>
+</html>
